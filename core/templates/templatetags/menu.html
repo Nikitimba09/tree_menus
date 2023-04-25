@@ -17,13 +17,14 @@
 
                             <ul class="dropdown-menu" aria-labelledby="dropdown03">
                                 {% for m_item in menu_item.get_children %}
-                                    <li><a class="dropdown-item" href="#">{{ m_item }}</a></li>
+                                    <li><a class="dropdown-item" href="{{ m_item.url }}">
+                                        {{ m_item }}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">{{ menu_item }}</a>
+                            <a class="nav-link" aria-current="page" href="{{ menu_item.url }}">{{ menu_item }}</a>
                         </li>
                     {% endif %}
 
